@@ -124,17 +124,12 @@
 <a href="https://mclist.io/">mclist.io</a>
 </details>
 
-### Links to the extension where you can install it:
-[Chrome Web Store](https://chrome.google.com/webstore/detail/auto-vote-minecraft-ratin/mdfmiljoheedihbcfiifopgmlcincadd)   
-[Firefox Add-ons](https://addons.mozilla.org/ru/firefox/addon/auto-vote-rating/) (no longer supported)   
-[Opera Addons](https://addons.opera.com/ru/extensions/details/auto-vote-minecraft-rating/) (not published, waiting for an endless moderation check)   
-[Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/auto-vote-rating/ecoifpgiojfhmihcfomafdcmkphafpba)
 
-### Support via Discord: https://discord.com/invite/GyvMtbU
+### Support via Discord: https://discord.gg/borealis
 
 ## Install the extension from zip archive
 Here is a short guide how to install an unpacked extension on Google Chrome or Chromium-based browsers
-1. [Download](https://github.com/Serega007RU/Auto-Vote-Rating/archive/refs/heads/dev.zip) this repository
+1. [Download](https://github.com/BartolomeoDR/Pure-Vote-Rating/archive/refs/heads/dev.zip) this repository
 2. Unzip the archive to any convenient location
 3. Open the "Extensions" page `chrome://extensions/` in the browser and turn on the "Developer mode"
 
