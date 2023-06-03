@@ -236,7 +236,7 @@ async function checkOpen(project, transaction) {
         promises.push(fetchProjects())
         async function fetchProjects() {
             try {
-                const response = await fetch('https://serega007ru.github.io/Auto-Vote-Rating/projects.js')
+                const response = await fetch('https://bartolomeodr.github.io/Pure-Vote-Rating/projects.js')
                 const projects = await response.text()
                 if (!evil) {
                     // noinspection JSUnresolvedVariable
@@ -372,7 +372,7 @@ async function checkWindow() {
 async function groupTabs(tab) {
     // С начало ищем группу вкладок
     if (groupId == null) {
-        const groups = await chrome.tabGroups.query({title: 'Auto Vote Rating'})
+        const groups = await chrome.tabGroups.query({title: 'Pure Vote Rating'})
         if (groups.length) groupId = groups[0].id
     }
 
@@ -391,7 +391,7 @@ async function groupTabs(tab) {
     // Если мы не нашли групп или не смогли сгруппировать так как нет уже такой группы, то только тогда создаём эту группу
     try {
         groupId = await tryGroupTabs({tabIds: tab.id}, 0)
-        await chrome.tabGroups.update(groupId, {color: 'blue', title: 'Auto Vote Rating'})
+        await chrome.tabGroups.update(groupId, {color: 'blue', title: 'Pure Vote Rating'})
     } catch (error) {
         if (!error.message.includes('No tab with id') && !error.message.includes('No group with id')) {
             throw error
@@ -417,7 +417,7 @@ async function silentVote(project) {
 
         if (!settings.disabledUseRemoteCode) {
             try {
-                const response = await fetch('https://serega007ru.github.io/Auto-Vote-Rating/scripts/' + project.rating.toLowerCase() + '_silentvote.js')
+                const response = await fetch('https://bartolomeodr.github.io/Pure-Vote-Rating/scripts/' + project.rating.toLowerCase() + '_silentvote.js')
                 const textScript = await response.text()
                 if (!evil) {
                     // noinspection JSUnresolvedVariable
@@ -656,13 +656,13 @@ chrome.webNavigation.onCompleted.addListener(async function(details) {
         let textApi, textScript, textWorld
         if (!settings.disabledUseRemoteCode) {
             try {
-                const responseApi = await fetch('https://serega007ru.github.io/Auto-Vote-Rating/scripts/main/api.js')
+                const responseApi = await fetch('https://bartolomeodr.github.io/Pure-Vote-Rating/scripts/main/api.js')
                 textApi = await responseApi.text()
-                const responseScript = await fetch('https://serega007ru.github.io/Auto-Vote-Rating/scripts/' + project.rating.toLowerCase() + '.js')
+                const responseScript = await fetch('https://bartolomeodr.github.io/Pure-Vote-Rating/scripts/' + project.rating.toLowerCase() + '.js')
                 textScript = await responseScript.text()
                 // noinspection JSUnresolvedVariable,JSUnresolvedFunction
                 if (allProjects[project.rating]?.needWorld?.()) {
-                    const responseWorld = await fetch('https://serega007ru.github.io/Auto-Vote-Rating/scripts/' + project.rating.toLowerCase() + '_world.js')
+                    const responseWorld = await fetch('https://bartolomeodr.github.io/Pure-Vote-Rating/scripts/' + project.rating.toLowerCase() + '_world.js')
                     textWorld = await responseWorld.text()
                 }
             } catch (error) {
@@ -736,7 +736,7 @@ chrome.webNavigation.onCompleted.addListener(async function(details) {
         // let textCaptcha
         // if (!settings.disabledUseRemoteCode) {
         //     try {
-        //         const responseApi = await fetch('https://serega007ru.github.io/Auto-Vote-Rating/scripts/main/captchaclicker.js')
+        //         const responseApi = await fetch('https://bartolomeodr.github.io/Pure-Vote-Rating/scripts/main/captchaclicker.js')
         //         textCaptcha = await responseApi.text()
         //     } catch (error) {
         //         console.warn(getProjectPrefix(project, true), 'Ошибка при получении удалённого кода scripts/main/captchaclicker.js, использую вместо этого локальный код', error.message)
@@ -1113,7 +1113,7 @@ async function endVote(request, sender, project) {
     if (!settings.disabledUseRemoteCode && (!evilProjects || evilProjects < Date.now())) {
         evilProjects = Date.now() + 300000
         try {
-            const response = await fetch('https://serega007ru.github.io/Auto-Vote-Rating/projects.js')
+            const response = await fetch('https://bartolomeodr.github.io/Pure-Vote-Rating/projects.js')
             const projects = await response.text()
             if (!evil) {
                 // noinspection JSUnresolvedVariable
@@ -1455,7 +1455,7 @@ async function sendReport(request, sender, tabDetails, project, reported) {
     message3.platform = 'javascript'
     message3.timestamp = date.getTime() / 1000
     message3.environment = 'production'
-    message3.release = 'Auto-Vote-Rating@' + chrome.runtime.getManifest().version
+    message3.release = 'Pure-Vote-Rating@' + chrome.runtime.getManifest().version
     message3.extra = {}
     if (detailsError) message3.extra.detailsError = detailsError
     message3.extra.project = project
@@ -1706,5 +1706,5 @@ console._collect = function (type, args) {
 
 /*
 Открытый репозиторий:
-https://github.com/Serega007RU/Auto-Vote-Rating/
+https://github.com/BartolomeoDR/Pure-Vote-Rating/
 */

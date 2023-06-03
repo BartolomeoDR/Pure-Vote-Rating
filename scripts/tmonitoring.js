@@ -21,7 +21,7 @@ async function vote(first) {
     if (document.getElementById("nickname") != null) {
         document.getElementById("nickname").value = project.nick
     } else {
-        console.warn('[Auto Vote Rating] Нет поля ввода никнейма')
+        console.warn('[Pure Vote Rating] Нет поля ввода никнейма')
     }
     document.querySelector("#voteModal > div.modal-dialog > div > div.modal-footer.clearfix > div.pull-right > a").click()
 }

@@ -1,4 +1,4 @@
-# Auto Vote Rating - Chrome Extension
+# Pure Vote Rating - Chrome Extension
 <details>
 <summary>List of sites that the extension supports</summary>
 <a href="http://topcraft.ru/">topcraft.ru</a>  
@@ -128,14 +128,14 @@
 ### Support via Discord: https://discord.gg/borealis
 
 ## Install the extension from zip archive
-Here is a short guide how to install an unpacked extension on Google Chrome or Chromium-based browsers
-1. [Download](https://github.com/BartolomeoDR/Pure-Vote-Rating/archive/refs/heads/dev.zip) this repository
-2. Unzip the archive to any convenient location
-3. Open the "Extensions" page `chrome://extensions/` in the browser and turn on the "Developer mode"
+Короткий гайд, как установить распакованное расширение для Google Chrome браузера
+1. [Скачать](https://github.com/BartolomeoDR/Pure-Vote-Rating/archive/refs/heads/dev.zip) этот архив
+2. Распаковать архив в любом удобном месте на диске
+3. Открыть страницу "Расширения" `chrome://extensions/` в браузере и включать "Режим разработчика" в правой части экрана
 
 ![](https://i.imgur.com/iQ4DXVu.png)
 
-4. Click on the "Load unpacked" button and select the directory where you unpacked the archive.
+4. Нажмите "Загрузить распакованное расширение" и выберите место, в которое вы распаковали архив
 
 
 ## Libraries used

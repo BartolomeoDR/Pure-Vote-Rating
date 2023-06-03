@@ -218,7 +218,7 @@ window.addEventListener('load', async () => {
             evil = evalCore.getEvalInstance(self)
         }
         try {
-            const response = await fetch('https://serega007ru.github.io/Auto-Vote-Rating/projects.js')
+            const response = await fetch('https://bartolomeodr.github.io/Pure-Vote-Rating/projects.js')
             const projects = await response.text()
             evil(projects)
         } catch (error) {
